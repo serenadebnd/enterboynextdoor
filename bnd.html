@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보이넥스트도어 홍보 영상</title>
+    <style>
+        body, html {
+            cursor: url('hol148.ani'), auto;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #backgroundVideo, #endImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .video-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .knock-button {
+            z-index: 10; /* This ensures the button is above the video */
+            position: absolute;
+            top: 82%;
+            left: 88.5%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        /* Your custom cursor style here */
+        * {
+            cursor: url(https://cur.cursors-4u.net/holidays/hol-2/hol148.ani), url(https://cur.cursors-4u.net/holidays/hol-2/hol148.png), auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <video id="backgroundVideo" autoplay muted>
+            <source src="bndd.mp4" type="video/mp4">
+        </video>
+        <img id="endImage" src="bnd.png" alt="End Image" style="display: none;">
+        <img src="crunchpush.png" id="knockButton" class="knock-button" onclick="skipVideo()" alt="Knock">
+        <div class="icon-dock"> <!-- Initially hidden -->
+            <a href="https://www.facebook.com/BOYNEXTDOOR.official" target="_blank">
+                <img src="facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://twitter.com/BOYNEXTDOOR_KOZ" target="_blank">
+                <img src="twitter.png" alt="Twitter Icon">
+            </a>
+            <a href="https://www.instagram.com/boynextdoor_official/" target="_blank">
+                <img src="instagram.png" alt="Instagram Icon">
+            </a>
+        </div>        
+    </div>
+
+    <script>
+        document.getElementById('backgroundVideo').addEventListener('ended', function() {
+            // Hide the video
+            this.style.display = 'none';
+
+            // Display the end image
+            document.getElementById('endImage').style.display = 'block';
+
+            // Hide the knock button
+            document.getElementById('knockButton').style.display = 'none';
+        });
+
+        function skipVideo() {
+            const video = document.getElementById('backgroundVideo');
+            video.pause();
+            
+            // Hide the video and knock button
+            video.style.display = 'none';
+            document.getElementById('knockButton').style.display = 'none';
+
+            // Show the end image
+            document.getElementById('endImage').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

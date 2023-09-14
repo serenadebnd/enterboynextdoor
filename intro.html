@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+    <div class="video-container">
+        <video id="backgroundVideo" autoplay muted>
+            <source src="bndd.mp4" type="video/mp4">
+        </video>
+        <img src="crunchpush.png" id="knockButton" class="knock-button" onclick="skipVideoAndRedirect()" alt="Knock">
+        <img id="endImage" src="bnd.png" alt="End Image" style="display: none;">
+    </div>
+    
+    <script src="intro.js"></script>
+    <div class="fade-overlay" id="fadeOverlay"></div>
+
+</body>
+</html>
