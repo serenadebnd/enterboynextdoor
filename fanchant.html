@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MV Folder</title>
+    <link rel="stylesheet" href="fanchant.css">
+</head>
+<body>
+    <div class="background-container">
+        <img src="fanchant.JPEG" alt="Background Image">
+        
+        <div class="video-thumbnails">
+            <!-- Add all your video thumbnails here -->
+            <div class="video-thumbnail" onclick="playVideo('https://www.youtube.com/embed/lr0MN6lzIbg')">
+                <img src="drbrgtfc.jpg" alt="Video Thumbnail 1">
+            </div>
+            <div class="video-thumbnail" onclick="playVideo('https://www.youtube.com/embed/mSEQOxvhHTk')">
+                <img src="onofc.jpg" alt="Video Thumbnail 1">
+            </div
+            ><div class="video-thumbnail" onclick="playVideo('https://www.youtube.com/embed/60PtRKy4IEc')">
+                <img src="srndfc.jpg" alt="Video Thumbnail 1">
+            </div>
+            <div class="video-thumbnail" onclick="playVideo('https://www.youtube.com/embed/rVLCWqpKRJU')">
+                <img src="cryfc.jpg" alt="Video Thumbnail 1">
+            </div>
+            <div class="video-thumbnail" onclick="playVideo('https://www.youtube.com/embed/9LqrdhNnjU4')">
+            <img src="mgtfc.jpg" alt="Video Thumbnail 1">
+            </div>
+            <!-- ... add more video thumbnails as needed ... -->
+        </div>
+    </div>
+
+    <!-- Video Lightbox -->
+    <div id="videoLightbox" class="lightbox">
+        <span class="close-btn" onclick="closeVideo()">&times;</span>
+        <iframe id="lightboxVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script src="fanchant.js"></script>
+</body>
+</html>
